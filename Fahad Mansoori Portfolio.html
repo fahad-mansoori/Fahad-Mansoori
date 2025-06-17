@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fahad Mansoori | Graphic designer | Video Editor | Web Designer</title>
+<base target="_self"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6d28d9',
+                        secondary: '#f43f5e',
+                        dark: '#0f172a',
+                        darker: '#020617'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Bebas Neue', 'sans-serif']
+                    },
+                    animation: {
+                        'text-gradient': 'text-gradient 5s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    },
+                    keyframes: {
+                        'text-gradient': {
+                            '0%, 100%': { 'background-position': '0% 50%' },
+                            '50%': { 'background-position': '100% 50%' }
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            color: #e2e8f0;
+        }
+        
+        .gradient-text {
+            background-image: linear-gradient(90deg, #6d28d9, #f43f5e, #6d28d9);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        
+        .section-divider {
+            height: 150px;
+            background: linear-gradient(180deg, rgba(2,6,23,0) 0%, rgba(109,40,217,0.2) 100%);
+        }
+        
+        .portfolio-item {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(109, 40, 217, 0.25);
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #6d28d9, #f43f5e);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Loading animation for external links */
+        .external-link {
+            position: relative;
+        }
+        
+        .external-link::after {
+            content: '\f35d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin-left: 8px;
+            font-size: 0.8em;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .external-link:hover::after {
+            opacity: 1;
+            transform: translateX(3px);
+        }
+    </style>
+</head>
+<body class="bg-darker text-gray-200">
+<!-- Navigation -->
+<nav class="fixed w-full z-50 bg-darker/80 backdrop-blur-md border-b border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<a class="text-2xl font-bold gradient-text" href="#" id="logo">Fahad Mansoori</a>
+</div>
+<div class="hidden md:block">
+<div class="ml-10 flex items-center space-x-8">
+<a class="nav-link px-3 py-2 text-sm font-medium" href="#home">Home</a>
+<a class="nav-link px-3 py-2 text-sm font-medium" href="#about">About</a>
+<a class="nav-link px-3 py-2 text-sm font-medium" href="#portfolio">Portfolio</a>
+<a class="nav-link px-3 py-2 text-sm font-medium" href="#contact">Contact</a>
+</div>
+</div>
+<div class="md:hidden">
+<button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none" id="mobile-menu-button" type="button">
+<i class="fas fa-bars text-xl"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="hidden md:hidden bg-darker/95 backdrop-blur-lg" id="mobile-menu">
+<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+<a class="nav-link px-3 py-2 text-base font-medium block" href="#home">Home</a>
+<a class="nav-link px-3 py-2 text-base font-medium block" href="#about">About</a>
+<a class="nav-link px-3 py-2 text-base font-medium block" href="#portfolio">Portfolio</a>
+<a class="nav-link px-3 py-2 text-base font-medium block" href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16" id="home">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-darker"></div>
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+<div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-darker to-transparent"></div>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10 text-center">
+<h1 class="text-6xl md:text-8xl font-bold mb-4 font-display tracking-tight">
+<span class="gradient-text animate-text-gradient">Fahad Mansoori</span>
+</h1>
+<p class="text-xl md:text-2xl font-medium mb-8 text-gray-300 max-w-2xl mx-auto">
+                Graphic designer | Video Editor | Web Designer
+            </p>
+<div class="flex justify-center space-x-4">
+<a class="px-8 py-3 bg-gradient-to-r from-primary to-secondary rounded-full font-medium hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-primary/30" href="#portfolio">
+                    View My Work
+                </a>
+<a class="px-8 py-3 border border-primary text-primary rounded-full font-medium hover:bg-primary/10 transition-all duration-300 transform hover:scale-105" href="#contact">
+                    Get In Touch
+                </a>
+</div>
+</div>
+<div class="absolute bottom-10 left-0 right-0 flex justify-center animate-float">
+<a class="text-gray-400 hover:text-white" href="#about">
+<i class="fas fa-chevron-down text-2xl"></i>
+</a>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-20 relative" id="about">
+<div class="section-divider"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4 font-display">
+<span class="gradient-text">About Me</span>
+</h2>
+<div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-200"></div>
+<div class="relative bg-darker rounded-2xl p-1">
+<img alt="Xfahad" class="rounded-xl w-full h-auto object-cover" src="https://i.pinimg.com/736x/79/7c/e5/797ce57b06fa6ecc743f888f7b436204.jpg"/>
+</div>
+</div>
+</div>
+<div class="md:w-1/2">
+<h3 class="text-2xl font-bold mb-4">The Creative Journey</h3>
+<p class="text-gray-300 mb-6 leading-relaxed">
+                        I'm Fahad Mansoori, I am a dedicated student and a passionate freelancer specializing in graphic design, video editing, and web development. With a strong focus on creativity and quality, I balance academic responsibilities with real-world freelance projects to continuously improve my skills. My work reflects a deep commitment to detail, innovation, and client satisfaction. I thrive in dynamic environments and am always eager to learn, create, and deliver impactful digital experiences.
+
+
+                    </p>
+<p class="text-gray-300 mb-6 leading-relaxed">
+                        My work blends technical precision with raw emotion, whether I'm creating video edits that capture the story producing original Visuals like <a class="text-primary hover:underline external-link" href="https://images.unsplash.com/photo-1678257355149-6eda1755b1a2?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" target="_blank">"Graphics Designs"</a> and some <a class="text-secondary hover:underline external-link" href="https://www.youtube.com/shorts/lA_v-J6yVxE" target="_blank">"Video Edits"</a> that tell stories through sound.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<div class="bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2">
+<span class="text-primary font-medium">Web Designer</span>
+</div>
+<div class="bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2">
+<span class="text-secondary font-medium">Video Editor</span>
+</div>
+<div class="bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2">
+<span class="text-purple-400 font-medium">Web Designer</span>
+</div>
+<div class="bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2">
+<span class="text-pink-400 font-medium">Content Creator</span>
+</div>
+<a class="social-icon w-14 h-14 bg-slate-800/50 border border-slate-700 rounded-full flex items-center justify-center hover:bg-pink-500/20 hover:border-pink-500/50" href="https://www.youtube.com/channel/UC6NUZqEaPo3luRUSV4ihLXA" target="_blank"><i class="fab fa-youtube text-2xl text-red-500"></i></a><a class="social-icon w-14 h-14 bg-slate-800/50 border border-slate-700 rounded-full flex items-center justify-center hover:bg-pink-500/20 hover:border-pink-500/50" href="https://www.instagram.com/xfahad_editz/" target="_blank"><i class="fab fa-instagram text-2xl text-pink-400"></i></a></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="py-20 bg-gradient-to-b from-darker to-slate-900/50" id="portfolio">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4 font-display">
+<span class="gradient-text">My Portfolio</span>
+</h2>
+<div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+<p class="text-gray-400 max-w-2xl mx-auto mt-4">A collection of my creative work across different mediums</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Portfolio Item 1 -->
+<a class="portfolio-item bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 block" href="https://www.youtube.com/shorts/KTFVB2AQWrM" target="_blank">
+<div class="relative overflow-hidden h-64">
+<img alt="Aesthetic logos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" src="https://i.pinimg.com/736x/f7/83/f8/f783f8d1dec94bd89a5acb044888f159.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+<div>
+<h3 class="text-xl font-bold text-white">Logo Designs</h3>
+<p class="text-gray-300">Aesthetic Logos Desining</p>
+</div>
+</div>
+<div class="absolute top-4 right-4 bg-primary/90 text-white px-3 py-1 rounded-full text-sm font-medium">
+<i class="fas fa-play mr-1"></i> Explore
+                        </div>
+</div>
+</a>
+<!-- Portfolio Item 2 -->
+<a class="portfolio-item bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 block" href="https://www.youtube.com/shorts/PcGdefcVH5U" target="_blank">
+<div class="relative overflow-hidden h-64">
+<img alt="Music Production" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" src="https://i.pinimg.com/736x/b3/cf/4b/b3cf4b31a81f1d3f95737259e47ac95f.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+<div>
+<h3 class="text-xl font-bold text-white">Graphics Designs</h3>
+<p class="text-gray-300">Using Photoshop, Illustrator, Canva etc</p>
+</div>
+</div>
+<div class="absolute top-4 right-4 bg-primary/90 text-white px-3 py-1 rounded-full text-sm font-medium">
+<i class="fas fa-play mr-1"></i> Explore
+                        </div>
+</div>
+</a>
+<!-- Portfolio Item 3 -->
+<a class="portfolio-item bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 block" href="https://www.youtube.com/shorts/UqzITbr4cOw" target="_blank">
+<div class="relative overflow-hidden h-64">
+<img alt="Music Remix" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" src="https://images.unsplash.com/photo-1648134859211-4a1b57575f4e?q=80&w=1460&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+<div>
+<h3 class="text-xl font-bold text-white">Web Designing</h3>
+<p class="text-gray-300">Frontend Designing</p>
+</div>
+</div>
+<div class="absolute top-4 right-4 bg-primary/90 text-white px-3 py-1 rounded-full text-sm font-medium">
+<i class="fas fa-play mr-1"></i> Explore
+                        </div>
+</div>
+</a>
+<!-- Portfolio Item 4 -->
+<a class="portfolio-item bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 block" href="https://www.youtube.com/shorts/4Tm-ejSwbK4" target="_blank">
+<div class="relative overflow-hidden h-64">
+<img alt="Kitabaddar" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" src="https://images.unsplash.com/photo-1686061592315-af9342dc8d74?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+<div>
+<h3 class="text-xl font-bold text-white">Video Editing & Motion Grapics</h3>
+<p class="text-gray-300">Original composition using PremierPro, After Effects, etc</p>
+</div>
+</div>
+<div class="absolute top-4 right-4 bg-primary/90 text-white px-3 py-1 rounded-full text-sm font-medium">
+<i class="fas fa-play mr-1"></i> Explore
+                        </div>
+</div>
+</a>
+<!-- Portfolio Item 5 -->
+<a class="portfolio-item bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 block" href="https://www.youtube.com/@xfahad_editz" target="_blank">
+<div class="relative overflow-hidden h-64">
+<img alt="YouTube Shorts" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+<div>
+<h3 class="text-xl font-bold text-white">Content Creating</h3>
+<p class="text-gray-300">Bite-sized creative contents on my Yotube Channel</p>
+</div>
+</div>
+<div class="absolute top-4 right-4 bg-red-500/90 text-white px-3 py-1 rounded-full text-sm font-medium">
+<i class="fab fa-youtube mr-1"></i> Watch
+                        </div>
+</div>
+</a>
+<!-- Portfolio Item 6 -->
+<div class="portfolio-item bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 flex items-center justify-center">
+<div class="text-center p-8">
+<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse-slow">
+<i class="fas fa-plus text-3xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold">New Project Coming Soon</h3>
+<p class="text-gray-400 mt-2">Stay tuned for updates</p>
+<a class="inline-block mt-4 px-6 py-2 bg-transparent border border-primary text-primary rounded-full font-medium hover:bg-primary/10 transition-all" href="#contact">
+                            Notify Me
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- YouTube/Links Section -->
+<section class="py-20 bg-gradient-to-b from-slate-900/50 to-darker">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4 font-display">
+<span class="gradient-text">Watch &amp; Follow</span>
+</h2>
+<div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+<p class="text-gray-400 max-w-2xl mx-auto mt-4">Check out my latest content and connect with me</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden p-2">
+<div class="aspect-w-16 aspect-h-9">
+<!-- YouTube embed - replace with actual channel ID -->
+<iframe width="565" height="380" src="https://www.youtube.com/embed/ybQu0d1By28" title="Khwab 2.0 – Official Lyrical Music Video | xfahad| Emotional Romantic Rap" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-6">Connect With Me</h3>
+<p class="text-gray-300 mb-8 leading-relaxed">
+                        I'm always open to collaborations, creative projects, or just chatting about Graphic Designs and video editing. Follow me on social media to stay updated with my latest work and behind-the-scenes content.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="social-icon w-14 h-14 bg-slate-800/50 border border-slate-700 rounded-full flex items-center justify-center hover:bg-red-500/20 hover:border-red-500/50" href="https://www.youtube.com/@xfahad_editz" target="_blank">
+<i class="fab fa-youtube text-2xl text-red-500"></i>
+</a>
+<a class="social-icon w-14 h-14 bg-slate-800/50 border border-slate-700 rounded-full flex items-center justify-center hover:bg-blue-500/20 hover:border-blue-500/50" href="https://x.com/xfahad_editz" target="_blank">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M4.75 3h3.5l5.38 7.48 6.75-7.48h3.31l-8.37 9 8.88 12h-3.5l-6.33-8.52L5.75 21H2.25l8.88-9L2.25 3h2.5z"/>
+</svg>
+</a>
+<a class="social-icon w-14 h-14 bg-slate-800/50 border border-slate-700 rounded-full flex items-center justify-center hover:bg-neutral-900 hover:border-white" href="https://www.instagram.com/xfahad_editz/" target="_blank">
+<i class="fab fa-instagram text-2xl text-pink-400"></i>
+</a>
+<a class="social-icon w-14 h-14 bg-slate-800/50 border border-slate-700 rounded-full flex items-center justify-center hover:bg-blue-600/20 hover:border-blue-600/50" href="https://www.facebook.com/profile.php?id=61570619592190" target="_blank">
+<i class="fab fa-facebook-f text-2xl text-blue-500"></i>
+</a>
+
+</div>
+<div class="mt-8">
+<a class="inline-flex items-center px-6 py-3 border border-secondary text-secondary rounded-full font-medium hover:bg-secondary/10 transition-all" href="https://drive.google.com" target="_blank">
+<i class="fas fa-file-alt mr-2"></i> Download My Resume
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-20 relative" id="contact">
+<div class="section-divider"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4 font-display">
+<span class="gradient-text">Get In Touch</span>
+</h2>
+<div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+<p class="text-gray-400 max-w-2xl mx-auto mt-4">Have a project in mind or want to collaborate? Reach out!</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div>
+<h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+<p class="text-gray-300 mb-8 leading-relaxed">
+                        Whether you're interested in my Graphic Designing, Web Designing & Video editing services, want to discuss any other collaborations, or just want to say hello, I'd love to hear from you. I'm currently available for freelance projects and creative partnerships.
+                    </p>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg">
+<i class="fas fa-envelope text-primary text-xl"></i>
+</div>
+<div class="ml-4">
+<h4 class="text-lg font-medium">Email</h4>
+<a class="text-gray-400 hover:text-primary transition-colors external-link" href="mailto:fahadmansoori269@gmail.com">fahadmansoori269@gmail.com</a>
+</div>
+</div>
+<div class="flex items-start">
+<div class="flex-shrink-0 bg-secondary/10 p-3 rounded-lg">
+<i class="fas fa-map-marker-alt text-secondary text-xl"></i>
+</div>
+<div class="ml-4">
+<h4 class="text-lg font-medium">Based In</h4>
+<p class="text-gray-400">Karachi, Pakistan</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="flex-shrink-0 bg-purple-400/10 p-3 rounded-lg">
+<i class="fas fa-clock text-purple-400 text-xl"></i>
+</div>
+<div class="ml-4">
+<h4 class="text-lg font-medium">Availability</h4>
+<p class="text-gray-400">Any time</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-slate-800/50 border border-slate-700 rounded-xl p-8">
+<form class="space-y-6" id="contactForm">
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-1" for="name">Your Name</label>
+<input class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500" id="name" name="name" placeholder="Enter your name" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-1" for="email">Email Address</label>
+<input class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500" id="email" name="email" placeholder="Enter your email" required="" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-1" for="subject">Subject</label>
+<input class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500" id="subject" name="subject" placeholder="What's this about?" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-300 mb-1" for="message">Your Message</label>
+<textarea class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-500" id="message" name="message" placeholder="Tell me about your project..." required="" rows="4"></textarea>
+</div>
+<button class="w-full px-6 py-3 bg-gradient-to-r from-primary to-secondary rounded-full font-bold hover:opacity-90 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center" type="submit">
+<span id="submit-text">Send Message</span>
+<svg class="animate-spin -mr-1 ml-2 h-5 w-5 text-white hidden" fill="none" id="submit-spinner" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-darker border-t border-slate-800 py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-6 md:mb-0">
+<a class="text-2xl font-bold gradient-text" href="#" id="footer-logo">Fahad Mansoori</a>
+<p class="text-gray-400 mt-2">Graphic designer | Video Editor | Web Designer</p>
+</div>
+<div class="flex space-x-6">
+<a class="text-gray-400 hover:text-red-500 transition-colors" href="https://www.youtube.com/@xfahad_editz" target="_blank">
+<i class="fab fa-youtube text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-white-400 transition-colors" href="https://x.com/xfahad_editz" target="_blank">
+<svg class="w-6 h-6 text-grey" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M4.75 3h3.5l5.38 7.48 6.75-7.48h3.31l-8.37 9 8.88 12h-3.5l-6.33-8.52L5.75 21H2.25l8.88-9L2.25 3h2.5z"/>
+</svg>
+</a>
+<a class="text-gray-400 hover:text-pink-400 transition-colors" href="https://www.instagram.com/xfahad_editz/" target="_blank">
+<i class="fab fa-instagram text-xl"></i>
+</a>
+<a class="text-gray-400 hover:text-blue-500 transition-colors" href="https://www.facebook.com/profile.php?id=61570619592190" target="_blank">
+<i class="fab fa-facebook-f text-xl"></i>
+</a>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    © <span id="year"></span> Fahad Mansoori. All rights reserved.
+                </p>
+<div class="flex space-x-6">
+<a class="text-gray-400 hover:text-white text-sm" href="#">Privacy Policy</a>
+<a class="text-gray-400 hover:text-white text-sm" href="#">Terms of Service</a>
+<a class="text-gray-400 hover:text-white text-sm" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission with loading state
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const submitText = document.getElementById('submit-text');
+            const submitSpinner = document.getElementById('submit-spinner');
+            
+            submitText.textContent = 'Sending...';
+            submitSpinner.classList.remove('hidden');
+            
+            // Simulate form submission (replace with actual AJAX call)
+            setTimeout(() => {
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                
+                // Show success message
+                submitText.textContent = 'Message Sent!';
+                submitSpinner.classList.add('hidden');
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button text after delay
+                setTimeout(() => {
+                    submitText.textContent = 'Send Message';
+                }, 2000);
+                
+                // Show notification
+                alert(`Thank you, ${name}! Your message has been received. I'll get back to you soon from ${email}.`);
+            }, 1500);
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // External link handler
+        document.querySelectorAll('a[target="_blank"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Add small delay to allow the link to open
+                setTimeout(() => {
+                    // You could add analytics tracking here
+                    console.log('External link clicked:', this.href);
+                }, 100);
+            });
+        });
+
+        // Add scroll reveal animation
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.portfolio-item, .section-divider, form, .social-icon');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('animate-fadeIn');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
